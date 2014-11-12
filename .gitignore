@@ -6,4 +6,6 @@
 /node_modules
 
 # Intellij
-.idea/
+# .idea/
+.idea/workspace.xml
+.idea/tasks.xml
