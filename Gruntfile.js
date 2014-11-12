@@ -1,7 +1,7 @@
 module.exports = function (grunt) {
     'use strict';
 
-    var jsFiles = ['Grunfile.js', '*.js', 'bin/*.js'];
+    var jsFiles = ['Grunfile.js', '*.js', 'tests/*.js', 'bin/*.js'];
 
     // ===========================================================================
     // CONFIGURE GRUNT ===========================================================
@@ -13,7 +13,7 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON('package.json'),
 
         nodeunit: {
-            all: ['tests/**/*.test.js'],
+            all: ['tests/*.test.js'],
             options: {
                 reporter: 'junit',
                 reporterOptions: {
