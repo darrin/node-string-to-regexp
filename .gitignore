@@ -1,0 +1,9 @@
+*.DS_Store
+*.class
+/tmp
+/build
+/target
+/node_modules
+
+# Intellij
+.idea/

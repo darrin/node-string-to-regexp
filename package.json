@@ -1,0 +1,35 @@
+{
+  "name": "node-regexp-from-string",
+  "version": "0.0.1",
+  "description": "A simple module that knows how to build a regexp with or without flags without using eval.",
+  "main": "regexp-from-string.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:darrin/node-regexp-from-string.git"
+  },
+  "keywords": [
+    "regexp",
+    "nodejs"
+  ],
+  "author": "Darrin F. Edelman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/darrin/node-regexp-from-string/issues"
+  },
+  "homepage": "https://github.com/darrin/node-regexp-from-string",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-concurrent": "^1.0.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-nodeunit": "^0.4.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "jshint": "^2.5.8",
+    "jshint-stylish": "^1.0.0",
+    "load-grunt-tasks": "^1.0.0",
+    "nodeunit": "^0.9.0",
+    "time-grunt": "^1.0.0"
+  }
+}
