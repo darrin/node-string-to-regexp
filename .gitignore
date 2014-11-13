@@ -4,8 +4,10 @@
 /build
 /target
 /node_modules
+npm-debug.log
 
 # Intellij
 # .idea/
 .idea/workspace.xml
 .idea/tasks.xml
+.idea/dictionaries

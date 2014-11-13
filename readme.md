@@ -14,6 +14,10 @@ Of course the bold and brave can get the same effect by using 'eval'.  Because t
 
 Invalid regex expressions in fact produce a 'null' value at this time which you should look for.
 
+## Installation
+
+    npm install string-to-regexp --save
+
 ## Usage
 
     var stringToRegExp = require('string-to-regexp.js');
@@ -21,6 +25,18 @@ Invalid regex expressions in fact produce a 'null' value at this time which you 
     /^Hola$/i === stringToRegExp('/^Hola$/i');  // true
     /^Hola$/  === stringToRegExp('/^Hola$/');   // true
     /^Hola$/  === stringToRegExp('^Hola$');     // true
+
+## Tests
+
+  npm test
+
+## Contributing
+
+In lieu of a formal style guide, please maintain the existing coding style. Add unit tests for any new or changed functionality. Run 'grunt ci' to make sure all tests and jshint rules pass.
+
+## Release History
+
+* 0.1.0 Initial release
 
 # Reference
 
