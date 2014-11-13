@@ -26,6 +26,31 @@ Invalid regex expressions in fact produce a 'null' value at this time which you 
     /^Hola$/  === stringToRegExp('/^Hola$/');   // true
     /^Hola$/  === stringToRegExp('^Hola$');     // true
 
+
+### Avoiding Edge Cases
+
+This library will always prefer to the Javascript RegExp notation with flags to an alternative interpretation. So beware if you're building a regex that looks similar to the Javascript RegExp.
+
+If you're not sure this is the regular expression we use to determine whether to break out the flags:
+
+        var matchesRegExpWithFlags = /^\/(.*)\/{1}([gimy]{0,4})$/;
+
+If your input regex matches this the input will be dealt with as if it had flags.  Here are some examples:
+
+    /^foo$/i                                            // matches "foo" case-insensitive.
+    stringToRegExp('/^foo$/i');                         // matches "foo" case-insensitive.
+    /\/^foo$\/i/                                        // matches string containing "/^foo$/i"
+    stringToRegExp('/\\/^foo$\\/i/');                   // matches string containing "/^foo$/i"
+    /^foo$/i  === stringToRegExp('/^foo$/i');           // true
+    //^foo$/i/ === stringToRegExp('/\\/^foo$\\/i/');    // true
+    //^foo$/i/ === stringToRegExp('/^foo$/i');          // false
+
+_Note: that escaped characters will need to be double-escaped in strings compared to their Javascript object
+equivalents._
+
+In general you can avoid these edge cases by always using the javascript object style notation even when there are no
+flags - it is safe to start and end with a slash ('/').
+
 ## Tests
 
   npm test

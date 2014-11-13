@@ -66,4 +66,16 @@
         test.done();
     };
 
+    exports['should make sure my readme documented patterns behave as I expect.'] =  function(test) {
+        test.deepEqual(/\/^foo$\/i/, stringToRegExp('/\\/^foo$\\/i/'));
+        test.ok(/\/foo\/i/.test('/foo/i'));
+
+        var caseInsensitiveNativeRegex = /^foo$/i;
+        test.deepEqual(caseInsensitiveNativeRegex, stringToRegExp('/^foo$/i'));
+        test.ok(!caseInsensitiveNativeRegex.test('/^foo$/i'));
+        test.ok(caseInsensitiveNativeRegex.test('FoO'));
+
+        test.done();
+    };
+
 })();
